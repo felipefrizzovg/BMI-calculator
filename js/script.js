@@ -6,6 +6,7 @@ import { calculateBMI, notANumber } from './utils.js'
 const form = document.querySelector("form");
 const inputWeight = document.querySelector("#weight");
 const inputHeight = document.querySelector("#height");
+const input = document.querySelector("form input")
 
 // creating and assigning a function to an event
 form.onsubmit = (e) => {
@@ -33,3 +34,5 @@ function displayResultMessage(result) {
   Modal.message.innerText = message
   Modal.open()
 }
+
+input.oninput = () => AlertError.close()
